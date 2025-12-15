@@ -41,7 +41,7 @@ exports.getDashboardData = async (req, res) => {
 
         //Get total expense for last 30 days
         const expenseLast30Days = last30DaysExpenseTransactions.reduce(
-            (sum, transactions) => sum + transaction.amount,
+            (sum, transaction) => sum + transaction.amount,
             0
         );
 

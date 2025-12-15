@@ -25,7 +25,7 @@ const AuthLayout = ({children}) => {
                 </div>
                 <div>
                     <h1 className='text-3xl font-medium text-black'>Meon Expense Tracker</h1>
-                <h3 className="text-md font-semibold text-gray-500">Track your Income and Expenses.</h3>
+                    <h3 className="text-md font-semibold text-gray-500">Track your Income and Expenses.</h3>
                 </div>
             </div>
             {children}
