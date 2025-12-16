@@ -21,7 +21,7 @@ const Navbar = ({activeMenu}) => {
         </button>
 
         <div className="flex items-center gap-2">
-            <div className="w-10 h-10 flex items-center justify-center text-[40px] text-white bg-primary rounded-full drop-shadow-xl">
+            <div className="w-8 h-8 flex items-center justify-center text-[30px] text-white bg-primary rounded-full drop-shadow-xl">
                 <LuTrendingUpDown size={20}/>
             </div>
             <h2 className="text-lg font-medium text-black">Meon Expense Tracker</h2>

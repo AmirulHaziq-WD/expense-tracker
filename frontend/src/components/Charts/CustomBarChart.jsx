@@ -3,6 +3,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend, Cell, Tooltip, Resp
 
 const CustomBarChart = ({data = []}) => {
 
+    const datax = data[0]?.category ? "category" : "month";
+
     //Function to alternate color
     const getBarColor = (index) => {
         return index % 2 === 0 ? "#875cf5" : "#cfbfbb";
@@ -13,14 +15,14 @@ const CustomBarChart = ({data = []}) => {
             return (
                 <div className="bg-white shadow-md rounded-lg p-2 border border-gray-300">
                     <p className="text-xs font-semibold text-purple-800 mb-1">
-                        {payload[0].payload.category}
+                        {payload[0].payload.category || payload[0].payload.source}
                     </p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs text-gray-600">
                         Amount:{" "}
                         <span className="text-sm font-medium text-gray-900">RM{payload[0].payload.amount}</span>
                     </p>
                 </div>
-            )
+            );
         }
         return null;
     };
@@ -32,7 +34,7 @@ const CustomBarChart = ({data = []}) => {
                 <CartesianGrid stroke="none" />
 
                 <XAxis 
-                    dataKey="category"
+                    dataKey={datax}
                     tick={{ fontSize: 12, fill: '#555' }}
                     stroke="none"
                 />
