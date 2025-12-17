@@ -17,7 +17,7 @@ const EmojiPickerPopup = ({icon, onSelect}) => {
                 )}
             </div>
 
-            <p className="">
+            <p className="text-sm dark:text-white dark:hover:text-white/50 hover:underline">
                 {icon ? "Change Icon" : "Pick Icon"}
             </p>
         </div>

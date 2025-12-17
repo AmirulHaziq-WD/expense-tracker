@@ -44,13 +44,12 @@ const TransactionsInfoCard = ({
                         <LuTrash2 size={18}/>
                     </button>
                 )}
-            </div>
-
-            <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${getAmountStyles()}`}>
-                <h6 className="text-xs font-medium">
-                    {type === "income" ? "+" : "-"} RM{amount}
-                </h6>
-                {type === "income" ? <LuTrendingUp /> : <LuTrendingDown />}
+                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${getAmountStyles()}`}>
+                    <h6 className="text-xs font-medium">
+                        {type === "income" ? "+" : "-"} RM{amount}
+                    </h6>
+                    {type === "income" ? <LuTrendingUp /> : <LuTrendingDown />}
+                </div>
             </div>
         </div>
     </div>
